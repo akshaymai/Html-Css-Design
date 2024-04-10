@@ -12,11 +12,14 @@
       .container {
         width: 800px;
         margin: 0 auto;
+        /* position: relative; */
+
       }
       body {
         border-top: 10px solid #1098ad;
         font-family: sans-serif;
         color: #444;
+        position: relative;
       }
       h1,
       h2,
@@ -103,6 +106,22 @@
       .post-img {
         width: 100%;
         height: auto;
+      }
+      nav a:link{
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 30px;
+      }
+      nav a:last-child{
+        margin-right: 0;
+      }
+      .like-me{
+        padding: 10px;
+        font-size: 18px;
+        bottom: 0;
+        right: 0;
+        color: red;
+        position: absolute;
       }
       /* li:first-child {
 font-weight: bold;
@@ -268,5 +287,6 @@ a:active{
         <p id="copywrite">Copyright &copy; 2027 by The Code Magazine.</p>
       </footer>
     </div>
+    <button class="like-me">💚Like Me</button>
   </body>
 </html>
