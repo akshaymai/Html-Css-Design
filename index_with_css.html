@@ -47,8 +47,10 @@
       }
 
       h2 {
+        position: relative;
         font-size: 40px;
         margin-bottom: 30px;
+        color: #17b3cb;
       }
 
       h3 {
@@ -122,6 +124,17 @@
         right: 0;
         color: red;
         position: absolute;
+      }
+      h2::after{
+        content: 'Top';
+        background-color: #ffe70e;
+        font-size: 16px;
+        font-weight: bold;
+        display: inline-block;
+        padding: 5px 10px;
+        position: absolute;
+        right: -25px;
+        top: -10px;
       }
       /* li:first-child {
 font-weight: bold;
