@@ -8,9 +8,10 @@
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
       .container {
-        width: 800px;
+        width: 1200px;
         margin: 0 auto;
         /* position: relative; */
 
@@ -64,6 +65,7 @@
         font-size: 20px;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 30px;
       }
 
       ul,
@@ -97,7 +99,7 @@
         background-color: #f7f7f7;
         padding: 20px 40px;
         margin-bottom: 60px;
-        height: 80px;
+        height: 50px;
       }
       .post-header {
         margin-bottom: 40px;
@@ -109,11 +111,14 @@
         width: 100%;
         height: auto;
       }
-      nav a:link{
+      nav a:link,nav a:visited{
         display: inline-block;
         margin-top: 10px;
         margin-right: 30px;
+        color: #1098ad;
+        text-decoration: none;
       }
+      
       nav a:last-child{
         margin-right: 0;
       }
@@ -127,7 +132,8 @@
       }
       h2::after{
         content: 'Top';
-        background-color: #ffe70e;
+        /* background-color: #ffe70e; */
+        background-color: #7900;
         font-size: 16px;
         font-weight: bold;
         display: inline-block;
@@ -170,28 +176,67 @@ a:active{
 } */
 
       /* !impotant>>>inline>>>#id selector>>>class() or pschedo(:)>>>elements>>>universal(*) */
-    </style>
+
+/* Float */
+
+.auther{   
+  margin-top: 10px;
+  margin-left: 20px;
+  float: left;
+}
+.auther-img{
+  float: left; 
+  margin-bottom: 20px;
+}
+h1{
+  float: left;
+}
+nav{
+  float: right;
+}
+/* .clear{
+  clear: both;
+} */
+ .clearfix::after{
+  clear: both;
+  content: '';
+  display: block;
+ }
+ article{
+width: 800px;
+float: inline-start;
+ }
+ aside{
+  width: 325px;
+float: right; 
+ }
+ footer{
+  clear: both;
+ }
+ </style>
   </head>
 
   <body>
     <div class="container">
-      <header class="main-header">
+      <header class="main-header clearfix">
         <h1>📘 The Code Magazine</h1>
         <nav>
           <a href="#">Blog</a>
           <a href="#">Challenges</a>
           <a href="#">Flexbox</a>
-          <a href="#">Grid</a>
+          <a href="#">CSS Grid</a>
         </nav>
+        <!-- <div class="clear"></div> -->
       </header>
 
       <article>
         <header class="post-header">
           <h2>The Basic Language of the Web: HTML</h2>
-          <img src="/images/laura-jones.jpg" alt="jk" height="50" width="50" />
-          <p>
-            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+          <img class="auther-img" src="/images/laura-jones.jpg" alt="jk" height="50" width="50" />
+          <p class="auther">
+             Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
           </p>
+     
           <img
             src="/images/post-img.jpg"
             height="200"
